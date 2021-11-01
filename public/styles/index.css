@@ -2,3 +2,43 @@ body{
     background: rgba(0,0,0,0.7) url(/public/images/fundo_inicio.jpg);
     background-blend-mode: darken;
 }
+main{
+    margin-left: 150px;
+}
+.main-title{
+    margin-top: 100px;
+    color: white;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main-text{
+    margin-top: 20px;
+    color: white;
+    margin-right: 450px;
+    font-size: medium;
+}
+.main-button{
+    max-width: 250px;
+    height: 50px;
+    margin: 5px;
+    color: white;
+    border-color:rgb(98, 98, 98) ;
+    background-color: rgb(146, 146, 146);
+}
+.main-button:hover{
+    background-color: rgb(82, 82, 253);
+    border-color: white;
+}
+
+#colaborador{
+    margin-left: 700px;
+}
+h1{
+    color: white;
+    margin-top: 80px;
+}
+.help-text{
+    color: white;
+    margin-top: 10px;
+}
+

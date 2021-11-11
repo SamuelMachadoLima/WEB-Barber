@@ -24,20 +24,28 @@
 
     <div id="container">
         <div id="box">
-            <div id="centralizar align-items-center">
-                <p> Nome completo</p>
-                <input type="text" name="" id="btnnome" placeholder="xxxxxx xxxxxx xxxxxx">
-                <p id="down"> Telefone</p>
-                <input type="text" name="" id="btnnome" placeholder="(00) 0 0000-0000">
-                <p id="down"> CPF</p>
-                <input type="text" name="" id="btnnome" placeholder="000.000.000-00">
-                <p id="down"> Data de nascimento</p>
-                <input type="text" name="" id="btnnome" placeholder="00/00/0000">
-                <p id="down"> CEP</p>
-                <input type="text" name="" id="btnnome" placeholder="00.000-000">
+            <form action="/cadastrarCliente" method="POST">
+                <div id="centralizar align-items-center">
+                    <p> Nome completo</p>
+                    <input type="text" name="Nome" id="btnnome" placeholder="xxxxxx xxxxxx xxxxxx">
+                    <p id="down"> Telefone</p>
+                    <input type="text" name="Telefone" id="btnnome" placeholder="(00) 0 0000-0000">
+                    <p id="down"> CPF</p>
+                    <input type="text" name="CPF" id="btnnome" placeholder="000.000.000-00">
+                    <p id="down"> Data de nascimento</p>
+                    <input type="text" name="DataNasc" id="btnnome" placeholder="00/00/0000">
+                    <p id="down"> CEP</p>
+                    <input type="text" name="CEP" id="btnnome" placeholder="00.000-000">
+                    <p> E-mail</p>
+                    <input type="text" name="Email" id="btnnome" placeholder="xxxxxxxxxx@xxxx.com">
+                    <p id="down"> Senha</p>
+                    <input type="text" name="Senha" id="btnnome" placeholder="***************">
+                    <p id="down">Confirmar Senha</p>
+                    <input type="text" name="confirmaSenha" id="btnnome" placeholder="***************">
 
-                <a id="botaoproximo" href="/etapa2CadastroCliente">Proximo ></a>
-            </div>
+                    <button id="botaoproximo" type="submit">Proximo ></button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

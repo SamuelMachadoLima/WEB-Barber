@@ -3,9 +3,7 @@ function PaginaInicial(connection) {
 }
 
 PaginaInicial.prototype.CarregarPaginaInicial = function (callback) {
-    // this._connection.query(`SELECT * FROM ...`, callback);
-    console.log("3")
-    return callback;
+    this._connection.query(`SELECT * FROM cliente`, callback);
 };
 
 module.exports = function () {

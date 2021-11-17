@@ -5,4 +5,8 @@ module.exports = function (application) {
     application.post('/cadastrarCliente', function (req, res) {
         application.app.controllers.clienteController.InserirDados(application, req, res);
     });
+
+    application.get('/menuCliente', function (req, res) {
+        application.app.controllers.clienteController.CarregarMenu(application, req, res);
+    });
 };

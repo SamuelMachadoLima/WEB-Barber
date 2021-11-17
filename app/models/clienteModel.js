@@ -3,8 +3,11 @@ function Cliente(connection) {
 }
 
 Cliente.prototype.insereCliente = function (dados, callback) {
-    console.log(dados);
-    this._connection.query(`INSERT INTO cliente set ?`, dados, callback);
+    this._connection.query(`INSERT INTO cliente set ?`, [dados], callback);
+};
+
+Cliente.prototype.selecionaCliente = function (callback) {
+    this._connection.query(`SELECT * FROM cliente`, callback);
 };
 
 module.exports = function () {

@@ -95,3 +95,5 @@ h1 {
 #Barbeiro a, #Cliente a{
     height: 7rem;
 }
+
+.hideMe {display: none !important;}

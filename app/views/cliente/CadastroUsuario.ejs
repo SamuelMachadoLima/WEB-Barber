@@ -18,6 +18,7 @@
             WEB Barber - Nome da Barbearia
         </a>
     </nav>
+    
     <div id="text">
         <h4>Cadastro Cliente</h4>
     </div>
@@ -27,27 +28,33 @@
             <form action="/cadastrarCliente" method="POST">
                 <div id="centralizar align-items-center">
                     <p> Nome completo</p>
-                    <input type="text" name="Nome" id="btnnome" placeholder="xxxxxx xxxxxx xxxxxx">
-                    <p id="down"> Telefone</p>
-                    <input type="text" name="Telefone" id="btnnome" placeholder="(00) 0 0000-0000">
-                    <p id="down"> CPF</p>
-                    <input type="text" name="CPF" id="btnnome" placeholder="000.000.000-00">
-                    <p id="down"> Data de nascimento</p>
-                    <input type="text" name="DataNasc" id="btnnome" placeholder="00/00/0000">
-                    <p id="down"> CEP</p>
-                    <input type="text" name="CEP" id="btnnome" placeholder="00.000-000">
+                    <input type="text" name="Nome" class="btnnome" placeholder="xxxxxx xxxxxx xxxxxx" value="<%= field.Nome %>">
+                    <p class="down"> Telefone</p>
+                    <input type="text" name="Telefone" class="btnnome" placeholder="(00) 0 0000-0000" value="<%= field.Telefone %>">
+                    <p class="down"> CPF</p>
+                    <input type="text" name="CPF" class="btnnome" placeholder="000.000.000-00" value="<%= field.CPF %>">
+                    <p class="down"> Data de nascimento</p>
+                    <input type="text" name="DataNasc" class="btnnome" placeholder="00/00/0000" value="<%= field.DataNasc %>">
+                    <p class="down"> CEP</p>
+                    <input type="text" name="CEP" class="btnnome" placeholder="00.000-000" value="<%= field.CEP %>">
                     <p> E-mail</p>
-                    <input type="text" name="Email" id="btnnome" placeholder="xxxxxxxxxx@xxxx.com">
-                    <p id="down"> Senha</p>
-                    <input type="text" name="Senha" id="btnnome" placeholder="***************">
-                    <p id="down">Confirmar Senha</p>
-                    <input type="text" name="confirmaSenha" id="btnnome" placeholder="***************">
+                    <input type="text" name="Email" class="btnnome" placeholder="xxxxxxxxxx@xxxx.com" value="<%= field.Email %>">
+                    <p class="down"> Senha</p>
+                    <input type="text" name="Senha" class="btnnome" placeholder="***************" value="">
+                    <p class="down">Confirmar Senha</p>
+                    <input type="text" class="btnnome" placeholder="***************" value="">
 
                     <button id="botaoproximo" type="submit">Proximo ></button>
                 </div>
             </form>
         </div>
     </div>
+
+    <% if(erro == 1){ %>
+        <script>
+            alert("O CPF já está cadastrado!")
+        </script>
+    <% } %>
 </body>
 
 </html>

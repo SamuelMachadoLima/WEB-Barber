@@ -1,6 +1,6 @@
 // Arquivo de conexão com BD
 
-var mysql = require('mysql');        
+var mysql = require('mysql');
 
 var connMySQL =  function(){
     return mysql.createPool({
@@ -8,6 +8,7 @@ var connMySQL =  function(){
         user: "root",
         password: "",
         database: "web_barber",
+        port: 3306,
 
         multipleStatements: true
     });

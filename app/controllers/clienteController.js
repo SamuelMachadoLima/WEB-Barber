@@ -1,5 +1,5 @@
 module.exports.CarregarPagina = function (application, req, res) {
-    res.render("cliente/CadastroUsuario");
+    res.render("cliente/CadastroUsuario", { erro: 0, field: {} });
 }
 
 module.exports.InserirDados = function (application, req, res) {
@@ -8,6 +8,11 @@ module.exports.InserirDados = function (application, req, res) {
     var params = req.body;
 
     clienteModel.insereCliente(params, function (err) {
-        res.redirect("/");
+        if (err) {
+            if (err.errno == 1062) {
+                res.render("cliente/cadastroUsuario", { erro: 1, field: params });
+            }
+            else console.log(err.errno);
+        }else res.redirect("/");
     });
 }

@@ -20,7 +20,7 @@
         </a>
     </nav>
     <div id="text">
-        <h4>Menu - <%= response[0].Nome %> (cliente)</h4>
+        <h4>Menu <%= (response[0] != undefined ? `- ${response[0].Nome}` : "") %> (cliente)</h4>
     </div>
 
     <div id="container">

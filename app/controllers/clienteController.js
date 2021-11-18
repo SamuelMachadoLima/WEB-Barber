@@ -13,6 +13,10 @@ module.exports.InserirDados = function (application, req, res) {
                 res.render("cliente/cadastroUsuario", { erro: 1, field: params });
             }
             else console.log(err.errno);
-        }else res.redirect("/");
+        } else res.redirect("/");
     });
+}
+
+module.exports.CarregarMenu = function (application, req, res) {
+    res.render("cliente/MenuCliente", { response: {}, autenticado: {} });
 }

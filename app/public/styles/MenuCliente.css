@@ -33,6 +33,11 @@ body{
 #centralizar{
     text-align: center;
 }
+
+button{
+    cursor: pointer;
+}
+
 #botaoAgendarHorario{
     border-radius: 5px;
     width: 380px;

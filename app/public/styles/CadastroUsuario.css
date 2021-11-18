@@ -1,5 +1,11 @@
+html{
+    background-color: #f8f9fa;
+}
+
 body{
     margin: 0px;
+    width: 100%;
+    background-color: #f8f9fa !important;
 }
 #text{
     text-align: center;
@@ -22,7 +28,7 @@ body{
 #box {
     margin-top: 40px;
     width: 40%;
-    height: 900px;
+    height: 100%;
     background: white;
     border-radius: 2%;
     padding: 30px 50px;
@@ -44,9 +50,13 @@ body{
     margin-top: 15px;
     left: 0%;
 }
-#botaoproximo{ 
+button#botaoanterior{ 
+    opacity: 0.85;
+}
+button{ 
+    margin-top: 50%;
     border-radius: 5px;
-    width: 300px;
+    width: 45%;
     height: 50px;
     margin: 30px 62px;
     background: #000000;
@@ -63,3 +73,5 @@ body{
    align-items: center;
    cursor: pointer;
 }
+
+.hideMe {display: none !important;}

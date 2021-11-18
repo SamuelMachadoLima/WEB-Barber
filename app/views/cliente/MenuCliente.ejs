@@ -14,13 +14,12 @@
 <body style=" background-color: #f8f9fa;">
     <nav id="navbar" class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="images/icon.jpeg" width="30" height="30" class="d-inline-block align-top"
-                alt="">
+            <img src="images/icon.jpeg" width="30" height="30" class="d-inline-block align-top">
             WEB Barber - Nome da Barbearia
         </a>
     </nav>
     <div id="text">
-        <h4>Menu <%= (response[0] != undefined ? `- ${response[0].Nome}` : "") %> (cliente)</h4>
+        <h4>Menu <%= (response[0] !=undefined ? `- ${response[0].Nome}` : "" ) %> (cliente)</h4>
     </div>
 
     <div id="container">

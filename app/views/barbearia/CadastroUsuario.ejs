@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroUsuário</title>
+    <link rel="stylesheet" href="/styles/CadastroUsuario.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/images/icon.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+            WEB Barber
+        </a>
+    </nav>
+    <div id="text">
+        <h4>Cadastro de Barbearia</h4>
+    </div>
+    <div id="container">
+        <div id="box">
+            <form action="/cadastrarBarbearia" method="POST">
+                <div id="centralizar" class="step1">
+                    <p> Nome da Barbearia</p>
+                    <input type="text" name="Nome" class="btnnome" placeholder="xxxxxx xxxxxx xxxxxx" value="">
+                    <p class="down"> CNPJ</p>
+                    <input type="text" name="CNPJ" class="btnnome" placeholder="XX.XXX.XXX/0001-XX" value="">
+                    <p class="down"> Senha</p>
+                    <input type="text" name="Senha" class="btnnome" placeholder="***************">
+                    <p class="down">Confirmar Senha</p>
+                    <input type="text" class="btnnome" placeholder="***************">
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button id="botaoproximo"type="button">Proximo ></button>
+                    </div>
+                </div>
+
+                <div class="step2 hideMe">
+                    <p> CEP</p>
+                    <input type="text" name="CEP" class="btnnome" placeholder="00000-000" value="">
+                    <p class="down"> Rua</p>
+                    <input type="text" name="Rua" class="btnnome" placeholder="(00) 0 0000-0000" value="">
+                    <p class="down"> Bairro</p>
+                    <input type="text" name="Bairro" class="btnnome" placeholder="000.000.000-00" value="">
+                    <p class="down"> Cidade</p>
+                    <input type="text" name="Cidade" class="btnnome" placeholder="000.000.000-00" value="">
+                    <p class="down"> Número</p>
+                    <input type="text" name="Numero" class="btnnome" placeholder="000.000.000-00" value="">
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button id="botaoanterior" type="button">< Voltar</button>
+                        <button id="botaoproximo2" class="ml-3" type="submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#botaoproximo").click(function () {
+                $(".step1").addClass('hideMe');
+                $(".step2").removeClass('hideMe');
+            });
+            $("#botaoanterior").click(function () {
+                $(".step2").addClass('hideMe');
+                $(".step1").removeClass('hideMe');
+            });
+        });
+    </script>
+</body>
+
+</html>

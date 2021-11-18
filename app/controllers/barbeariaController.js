@@ -1,10 +1,13 @@
 module.exports.CarregarPagina = function (application, req, res) {
-    // var connection = application.config.dbConnection();
-    // var indexModel = new application.app.models.indexModel();
+    res.render("barbearia/cadastroUsuario", {response: {} });
+}
 
-    // indexModel.CarregarPaginaInicial(function (err, result) {
-    //     res.render("index");
-    // });
+module.exports.InsereBarbearia = function (application, req, res) {
+    var connection = application.config.dbConnection();
+    var barbeariaModel = new application.app.models.barbeariaModel(connection);
+    var params = req.body;
 
-    res.render("barbearia/cadastrarBarbearia");
+    barbeariaModel.insereBarbearia(params, function (err, result) {
+        res.render("barbearia/MenuBarbearia", {response: result});
+    });
 }

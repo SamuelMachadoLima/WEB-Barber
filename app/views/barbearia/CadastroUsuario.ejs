@@ -26,13 +26,13 @@
             <form action="/cadastrarBarbearia" method="POST">
                 <div id="centralizar" class="step1">
                     <p> Nome da Barbearia</p>
-                    <input type="text" name="Nome" class="btnnome" placeholder="xxxxxx xxxxxx xxxxxx" value="">
+                    <input type="text" name="Nome" id="campoNome" class="btnnome" placeholder="xxxxxx xxxxxx xxxxxx" required value="">
                     <p class="down"> CNPJ</p>
-                    <input type="text" name="CNPJ" class="btnnome" placeholder="XX.XXX.XXX/0001-XX" value="">
+                    <input type="text" name="CNPJ" id="campoCNPJ" class="btnnome" placeholder="XX.XXX.XXX/0001-XX" required value="">
                     <p class="down"> Senha</p>
-                    <input type="text" name="Senha" class="btnnome" placeholder="***************">
+                    <input type="password" name="Senha" id="campoSenha" class="btnnome" required placeholder="***************">
                     <p class="down">Confirmar Senha</p>
-                    <input type="text" class="btnnome" placeholder="***************">
+                    <input type="password" id="campoCSenha" class="btnnome" required placeholder="***************">
 
                     <div class="d-flex justify-content-center mt-3">
                         <button id="botaoproximo"type="button">Proximo ></button>
@@ -41,15 +41,15 @@
 
                 <div class="step2 hideMe">
                     <p> CEP</p>
-                    <input type="text" name="CEP" class="btnnome" placeholder="00000-000" value="">
+                    <input type="text" name="CEP" id="campoCEP" class="btnnome" required placeholder="00000-000" value="">
                     <p class="down"> Rua</p>
-                    <input type="text" name="Rua" class="btnnome" placeholder="(00) 0 0000-0000" value="">
+                    <input type="text" name="Rua" id="campoRua" class="btnnome" required placeholder="(00) 0 0000-0000" value="">
                     <p class="down"> Bairro</p>
-                    <input type="text" name="Bairro" class="btnnome" placeholder="000.000.000-00" value="">
+                    <input type="text" name="Bairro" id="campoBairro" class="btnnome" required placeholder="000.000.000-00" value="">
                     <p class="down"> Cidade</p>
-                    <input type="text" name="Cidade" class="btnnome" placeholder="000.000.000-00" value="">
+                    <input type="text" name="Cidade" id="campoCidade" class="btnnome" required placeholder="000.000.000-00" value="">
                     <p class="down"> Número</p>
-                    <input type="text" name="Numero" class="btnnome" placeholder="000.000.000-00" value="">
+                    <input type="text" name="Numero" id="campoNumero" class="btnnome" required placeholder="000.000.000-00" value="">
 
                     <div class="d-flex justify-content-center mt-3">
                         <button id="botaoanterior" type="button">< Voltar</button>
@@ -72,18 +72,9 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#botaoproximo").click(function () {
-                $(".step1").addClass('hideMe');
-                $(".step2").removeClass('hideMe');
-            });
-            $("#botaoanterior").click(function () {
-                $(".step2").addClass('hideMe');
-                $(".step1").removeClass('hideMe');
-            });
-        });
-    </script>
-</body>
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="/js/scriptCadastroBarbearia.js"></script>
+ </body>
 
 </html>

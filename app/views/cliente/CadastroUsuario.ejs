@@ -28,25 +28,25 @@
             <form action="/cadastrarCliente" method="POST">
                 <div id="centralizar align-items-center">
                     <p> Nome completo</p>
-                    <input type="text" name="Nome" class="btnnome" placeholder="xxxxxx xxxxxx xxxxxx"
-                        value="<%= field.Nome %>">
+                    <input type="text" name="Nome" class="btnnome" id="campoNome" placeholder="xxxxxx xxxxxx xxxxxx"
+                    required   value="<%= field.Nome %>">
                     <p class="down"> Telefone</p>
-                    <input type="text" name="Telefone" class="btnnome" placeholder="(00) 0 0000-0000"
-                        value="<%= field.Telefone %>">
+                    <input type="text" name="Telefone" id="campoTelefone" class="btnnome" placeholder="(00) 0 0000-0000"
+                    required   value="<%= field.Telefone %>">
                     <p class="down"> CPF</p>
-                    <input type="text" name="CPF" class="btnnome" placeholder="000.000.000-00" value="<%= field.CPF %>">
+                    <input type="text" name="CPF" id="campoCPF" class="btnnome" placeholder="000.000.000-00" required value="<%= field.CPF %>">
                     <p class="down"> Data de nascimento</p>
-                    <input type="text" name="DataNasc" class="btnnome" placeholder="00/00/0000"
-                        value="<%= field.DataNasc %>">
+                    <input type="date" name="DataNasc" id="campoData" class="btnnome" placeholder="00/00/0000"
+                    required   value="<%= field.DataNasc %>">
                     <p class="down"> CEP</p>
-                    <input type="text" name="CEP" class="btnnome" placeholder="00.000-000" value="<%= field.CEP %>">
+                    <input type="text" name="CEP" id="campoCEP" class="btnnome" placeholder="00.000-000" required value="<%= field.CEP %>">
                     <p> E-mail</p>
-                    <input type="text" name="Email" class="btnnome" placeholder="xxxxxxxxxx@xxxx.com"
-                        value="<%= field.Email %>">
+                    <input type="email" name="Email" class="btnnome" placeholder="xxxxxxxxxx@xxxx.com"
+                     required  value="<%= field.Email %>">
                     <p class="down"> Senha</p>
-                    <input type="text" name="Senha" class="btnnome" placeholder="***************" value="">
+                    <input type="password" name="Senha" class="btnnome" placeholder="***************" required value="">
                     <p class="down">Confirmar Senha</p>
-                    <input type="text" class="btnnome" placeholder="***************" value="">
+                    <input type="password" class="btnnome" placeholder="***************" required value="">
 
                     <div class="d-flex justify-content-center mt-3">
                         <button id="botaoproximo" type="submit">Proximo ></button>
@@ -55,6 +55,9 @@
             </form>
         </div>
     </div>
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="/js/scriptCadastroCliente.js"></script>
 
     <% if(erro==1){ %>
         <script>

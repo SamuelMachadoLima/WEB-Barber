@@ -7,6 +7,6 @@ module.exports = function (application) {
     });
 
     application.get('/menuCliente', function (req, res) {
-        application.app.controllers.clienteController.CarregarMenu(application, req, res);
+        application.app.controllers.indexController.Autenticar(application, req, res);
     });
 };

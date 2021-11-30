@@ -6,9 +6,9 @@ Cliente.prototype.insereBarbearia = function (dados, callback) {
     this._connection.query(`INSERT INTO barbearia set ?`, [dados], callback);
 };
 
-// Cliente.prototype.selecionaCliente = function (callback) {
-//     this._connection.query(`SELECT * FROM cliente`, callback);
-// };
+Cliente.prototype.selecionaBarbearia = function (callback) {
+    this._connection.query(`SELECT * FROM barbearia`, callback);
+};
 
 module.exports = function () {
     return Cliente;

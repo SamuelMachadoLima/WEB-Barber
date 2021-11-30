@@ -15,8 +15,21 @@ module.exports.Autenticar = function (application, req, res) {
     var params = req.body;
 
     indexModel.Autenticar(params, function (err, result) {
-        const autenticado = (result[0] != undefined);
-        res.render("cliente/MenuCliente", { response: result, autenticado: autenticado });
+        if(err){
+            res.send(err);
+        }
+
+        if(result.length > 0){
+            req.session.user = result;
+            if (params.tipoUser == 1)
+                res.render("cliente/MenuCliente", { response: result, autenticado: true });
+            else{
+                res.redirect("/menuBarbearia");
+                // res.render("barbearia/MenuBarbearia", { response: result, autenticado: true });
+            }
+
+        } else{
+            res.redirect("/");
+        }
     });
 }
-

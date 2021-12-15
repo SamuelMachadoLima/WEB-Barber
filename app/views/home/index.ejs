@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <? if(response){
+        alert("Logado OK")
+    }else{
+        alert("Falha no Login");
+    }
+    ?>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
         <div class=" container-fluid ">
             <!-- Logo -->
@@ -113,7 +120,7 @@
                         </div>
 
                         <div id="barbeariaLogin" class="modal-body d-flex justify-content-between w-100 hideMe">
-                            <form action="/menuCliente" method="post" class="w-100">
+                            <form action="/autenticar" method="post" class="w-100">
                                 <div class="form-group row">
                                     <label for="staticCNPJ" class="col-sm-2 col-form-label">CNPJ</label>
                                     <div class="col-sm-10">
@@ -143,7 +150,7 @@
                         </div>
 
                         <div id="clienteLogin" class="modal-body d-flex justify-content-between w-100 hideMe">
-                            <form action="/menuCliente" method="post" class="w-100">
+                            <form action="/autenticar" method="post" class="w-100">
                                 <div class="form-group row">
                                     <label for="staticCPF" class="col-sm-2 col-form-label">CPF</label>
                                     <div class="col-sm-10">

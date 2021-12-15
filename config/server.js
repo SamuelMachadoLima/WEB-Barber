@@ -4,12 +4,25 @@
 var express = require('express')
 var app = express();
 var consign = require('consign')();
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
+app.use(express.json());
+app.use(cookieParser());
 app.use(express.static('./app/public'))
 app.use(express.urlencoded({extended: true}));
+app.use(session({
+    key: "userId",
+    secret: "test",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 1000 * 60 * 15,
+    }
+}));
 
 consign
     .include('app/routes')

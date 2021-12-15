@@ -11,3 +11,8 @@ module.exports.InsereBarbearia = function (application, req, res) {
         res.render("barbearia/MenuBarbearia", {response: result});
     });
 }
+
+module.exports.CarregarMenu = function (application, req, res) {
+    console.log(req.cookies)
+    res.render("barbearia/MenuBarbearia", {response: {} });
+}

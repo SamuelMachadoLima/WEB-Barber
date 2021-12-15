@@ -25,7 +25,7 @@
 
     <div id="container">
         <div id="box">
-            <form action="/cadastrarCliente" method="POST" id="FormSenha" name="FormSenha"  onsubmit="validarSenha()">
+            <form action="/cadastrarCliente" method="POST" id="FormSenha" name="FormSenha"  onsubmit="return validarSenha(event)">
                 <div id="centralizar align-items-center">
                     <p> Nome completo</p>
                     <input type="text" name="Nome" class="btnnome" id="campoNome" placeholder="xxxxxx xxxxxx xxxxxx"

@@ -17,8 +17,9 @@ $(function(){
     NovaSenha = document.FormSenha.NovaSenha.value;
     CNovaSenha = document.FormSenha.CNovaSenha.value;
     if (NovaSenha != CNovaSenha){ 
-         alert("SENHAS DIFERENTES! Por favor, digite senhas iguais!");
-         e.preventDefault();
+        e.preventDefault();
+        alert("SENHAS DIFERENTES! Por favor, digite senhas iguais!");
+        return false;
      }
     alert("Cadastro concluido!");
     return true;

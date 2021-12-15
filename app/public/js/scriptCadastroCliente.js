@@ -13,3 +13,13 @@ $(function(){
 
     $("#campoCEP").mask("00.000-000")
  })
+ function validarSenha(e){
+    NovaSenha = document.FormSenha.NovaSenha.value;
+    CNovaSenha = document.FormSenha.CNovaSenha.value;
+    if (NovaSenha != CNovaSenha){ 
+         alert("SENHAS DIFERENTES! Por favor, digite senhas iguais!");
+         e.preventDefault();
+     }
+    alert("Cadastro concluido!");
+    return true;
+}
